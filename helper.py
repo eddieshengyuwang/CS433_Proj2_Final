@@ -23,6 +23,7 @@ class DLProgress(tqdm):
         self.update((block_num - self.last_block) * block_size)
         self.last_block = block_num
 
+# horizontally flip image
 def horizontal_flip(images):
     horizontal_flips = []
     for img in images:
@@ -30,6 +31,7 @@ def horizontal_flip(images):
         horizontal_flips.append(hf)
     return horizontal_flips
 
+# vertically flip image
 def vertical_flip(images):
     vertical_flips = []
     for img in images:
@@ -109,7 +111,7 @@ def gen_batch_function(data_folder, image_shape):
                 gt_image = np.all(gt_image == background_color, axis=2)
                 gt_image = gt_image.reshape(gt_image.shape + (1,))
 
-                gt_image = np.concatenate((gt_image, np.invert(gt_image)), axis=2)
+                gt_image = np.concatenate((gt_image, np.invert(gt_image)), axis=2).astype(np.int8)
 
                 images.append(image)
                 gt_images.append(gt_image)
@@ -119,9 +121,6 @@ def gen_batch_function(data_folder, image_shape):
 
             images_flipped = horizontal_flip(images)
             images_flipped_v = vertical_flip(images)
-
-            print(images[0])
-            print(gt_images[0])
 
             images_flipped_gt = horizontal_flip(gt_images)
             images_flipped_v_gt = vertical_flip(gt_images)
