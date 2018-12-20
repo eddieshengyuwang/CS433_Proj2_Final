@@ -116,8 +116,8 @@ def gen_batch_function(data_folder, image_shape):
                 images.append(image)
                 gt_images.append(gt_image)
 
-            images = get_rotated_images(images, [90, 180, 270])
-            gt_images = get_rotated_images(gt_images, [90, 180, 270])
+            images_rot = get_rotated_images(images, [90, 180, 270])
+            gt_images_rot = get_rotated_images(gt_images, [90, 180, 270])
 
             images_flipped = horizontal_flip(images)
             images_flipped_v = vertical_flip(images)
@@ -125,8 +125,8 @@ def gen_batch_function(data_folder, image_shape):
             images_flipped_gt = horizontal_flip(gt_images)
             images_flipped_v_gt = vertical_flip(gt_images)
 
-            final = images + images_flipped + images_flipped_v
-            final_gt = gt_images + images_flipped_gt + images_flipped_v_gt
+            final = images + images_flipped + images_flipped_v + images_rot
+            final_gt = gt_images + images_flipped_gt + images_flipped_v_gt + gt_images_rot
 
             yield np.array(final), np.array(final_gt)
 
