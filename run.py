@@ -10,9 +10,9 @@ train_dir = 'data_road/training2'
 viz_dir = './data/data_road/test_set_images'
 
 # set below boolean = True if want to train
-train = True
+train = False
 if train:
-    input_size = (600, 600)
+    input_size = (400, 400)
 else:
     input_size = (608, 608)
 
