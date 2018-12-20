@@ -101,6 +101,7 @@ class FCN:
 
         writer = tf.summary.FileWriter('./graphs/kitti/', self.sess.graph)
         ckpt = tf.train.get_checkpoint_state(os.path.dirname('./checkpoints/kitti/900/checkpoint'))
+        print(ckpt, ckpt.model_checkpoint_path)
         if ckpt and ckpt.model_checkpoint_path and not train:
             print('Graph is available in hard disk. Hence, loading it.')
             saver.restore(self.sess, ckpt.model_checkpoint_path)
