@@ -101,7 +101,7 @@ class FCN:
 
         writer = tf.summary.FileWriter('./graphs/kitti/', self.sess.graph)
         ckpt = tf.train.get_checkpoint_state(os.path.dirname('./checkpoints/kitti/900/checkpoint'))
-        if ckpt and ckpt.model_checkpoint_path:
+        if ckpt and ckpt.model_checkpoint_path and not train:
             print('Graph is available in hard disk. Hence, loading it.')
             saver.restore(self.sess, ckpt.model_checkpoint_path)
 
@@ -121,7 +121,7 @@ class FCN:
                 epoch_no = int(itr / num_batches)
                 print('epoch: {0:>3d}  iter: {1:>4d}  loss: {2:>8.4e}'.format(epoch_no, itr, loss_val))
 
-                if ((itr + 1) % (num_batches * 20) == 0) or (itr == num_batches * num_epochs):
+                if itr != 0 and itr % 499 == 0 :
                     print('At iteration: {} save a checkpoint'.format(itr))
                     saver.save(self.sess, './checkpoints/kitti/state', itr)
 
