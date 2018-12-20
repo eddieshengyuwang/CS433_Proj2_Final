@@ -8,7 +8,7 @@ This project aims to perform semantic image segmentation from Google satellite i
 To install all the libraries required for the repository to run, execute the following Linux command:
 
 ```
-pip install tensorflow, numpy, scipy, tqdm, opencv-python
+pip install tensorflow numpy scipy tqdm opencv-python
 ```
 
 Afterwards, you will need to download the VGG-16 from [this link](https://www.cs.toronto.edu/~frossard/vgg16/vgg16_weights.npz): and save it to the `pretrained_weights` folder. 
@@ -27,8 +27,7 @@ viz_dir = './data/data_road/test_set_images'
 train = True
 ...
 ```
-
-Alternatively, you can leave the `run.py` file as is, which will use our pre-trained FCN model to predict outputs for the test images. The submission file will be found in the `runs/<highest number>/` directory called `fcn_16_patch8.csv`. 
+and run `python run.py`. Alternatively, you can leave the `run.py` file as is, which will use our pre-trained FCN model to predict outputs for the test images. The submission file will be found in the `runs/<highest number>/` directory called `fcn_16_patch8.csv`. Note that even if using pre-trained weights, prediction will stay take around 5 minutes.
 
 ## Description of files
 ### FCN Model
