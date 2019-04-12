@@ -214,3 +214,6 @@ if __name__ == '__main__':
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
                     callbacks=callbacks_list, validation_data=(x_val, y_val))
 
+    model.save('path.h5')
+
+
