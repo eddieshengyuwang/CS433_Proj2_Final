@@ -123,7 +123,7 @@ if __name__ == '__main__':
     train_df, val_df = train_test_split(train_df, test_size=1-split_perc)
 
     batch_size = 8
-    save_path = 'model_1_1.h5'
+    save_path = 'model_1_2.h5'
     target_shape = (608, 608)
     debug = False
     num_augs = 8 # this number is determined manually by the # of data augs you do in custom_generator
@@ -212,8 +212,8 @@ if __name__ == '__main__':
     input_shape = (300,300,3)
 
     #model = Unet(input_shape)
-    model = load_model('models/model_1.h5', custom_objects={'f1': f1, 'iou': iou})
-    model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy', metrics=['acc', f1, iou])
+    model = load_model('models/model_1_1.h5', custom_objects={'f1': f1, 'iou': iou})
+    model.compile(optimizer=Adam(lr=1e-5), loss='binary_crossentropy', metrics=['acc', f1, iou])
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
                     callbacks=callbacks_list, validation_data=(x_val, y_val))
 
