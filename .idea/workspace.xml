@@ -2,264 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8243687c-5164-4a43-a136-93d01aea98bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Unet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FINAL_ML.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FINAL_ML.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ml_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/kitti/900/blank.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoints/kitti/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/test_set_images/test_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_041.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_051.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_052.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_054.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_055.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_056.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_057.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_058.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_061.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_062.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_064.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_065.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_069.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_075.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_085.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_087.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/groundtruth/satImage_100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_016.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_019.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_020.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_021.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_022.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_023.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_025.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_026.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_027.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_028.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_029.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_030.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_031.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_032.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_033.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_034.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_035.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_036.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_037.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_038.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_039.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_040.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_041.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_042.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_043.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_044.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_047.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_049.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_050.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_051.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_052.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_053.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_054.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_055.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_056.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_057.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_058.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_060.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_061.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_062.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_063.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_064.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_065.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_066.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_067.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_068.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_069.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_070.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_071.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_072.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_073.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_074.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_075.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_076.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_077.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_078.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_079.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_080.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_081.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_082.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_083.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_084.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_085.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_086.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_087.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_088.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_089.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_090.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_099.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data_road/training2/images/satImage_100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrained_weights/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Unet.py" beforeDir="false" afterPath="$PROJECT_DIR$/Unet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/model_0/events.out.tfevents.1554786915.eddie-MacBookAir" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -286,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Unet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+            <state relative-caret-position="339">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -298,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+            <state relative-caret-position="145">
+              <caret line="98" column="44" lean-forward="true" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
@@ -308,10 +56,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helper.py">
+        <entry file="file://$PROJECT_DIR$/data/training/groundtruth/satImage_011.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/training/groundtruth/satImage_012.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/training/images/satImage_012.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/layers/merge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="10" />
+            <state relative-caret-position="130">
+              <caret line="361" selection-start-line="361" selection-end-line="361" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/predict.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -343,15 +118,17 @@
         <option value="$PROJECT_DIR$/load_model_predict.py" />
         <option value="$PROJECT_DIR$/run.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ml_utils.py" />
+        <option value="$PROJECT_DIR$/predict.py" />
         <option value="$PROJECT_DIR$/Unet.py" />
         <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
+    <option name="x" value="94" />
     <option name="y" value="423" />
-    <option name="width" value="1373" />
+    <option name="width" value="1346" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -375,12 +152,6 @@
             <path>
               <item name="EPFL_CS433_Road_Segmentation" type="b2602c69:ProjectViewProjectNode" />
               <item name="EPFL_CS433_Road_Segmentation" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="training" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EPFL_CS433_Road_Segmentation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EPFL_CS433_Road_Segmentation" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -393,7 +164,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Vidhya/scene_class/train.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../bailey" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -415,7 +186,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.train">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="FINAL_ML" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/predict.py" />
+      <option name="PARAMETERS" value="--model_name model_0.h5" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="FINAL_ML" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -438,9 +231,14 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.predict" />
+      <item itemvalue="Python.train" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.train" />
+        <item itemvalue="Python.predict" />
       </list>
     </recent_temporary>
   </component>
@@ -456,23 +254,23 @@
       <updated>1545333262667</updated>
       <workItem from="1545333264695" duration="9511000" />
       <workItem from="1554770806871" duration="2828000" />
-      <workItem from="1554774673218" duration="7703000" />
+      <workItem from="1554774673218" duration="9557000" />
+      <workItem from="1555022797491" duration="11974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20042000" />
+    <option name="totallyTimeSpent" value="33870000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="423" width="1373" height="873" extended-state="0" />
-    <editor active="true" />
+    <frame x="94" y="423" width="1346" height="873" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1951771" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18846154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293011" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,12 +287,47 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.32931423" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18846154" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293011" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39919356" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32931423" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/train.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EPFL_CS433_Road_Segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1554786787159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EPFL_CS433_Road_Segmentation$train.coverage" NAME="train Coverage Results" MODIFIED="1555044744423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/EPFL_CS433_Road_Segmentation$predict.coverage" NAME="predict Coverage Results" MODIFIED="1555031761801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/validation.py" />
@@ -530,16 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/keras/layers/pooling.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
@@ -570,13 +393,6 @@
     <entry file="file://$PROJECT_DIR$/loss.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Vidhya/scene_class/train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -586,27 +402,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/layers/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="361" selection-start-line="361" selection-end-line="361" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="2574" selection-start-line="2574" selection-end-line="2574" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,13 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/training_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="422" selection-start-line="422" selection-end-line="422" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/training.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -645,10 +437,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/helper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2076">
+          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1095">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mask_to_submission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ml_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/test_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test/test_29.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/training_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/test_predictions/1555025677.575345/test_44.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/training/images/satImage_011.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/training/images/satImage_012.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/training/groundtruth/satImage_012.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/training/groundtruth/satImage_011.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/layers/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="361" selection-start-line="361" selection-end-line="361" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/engine/base_layer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/keras/layers/convolutional.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="2466" selection-start-line="2466" selection-end-line="2466" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/tensor_shape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="127" column="29" lean-forward="true" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+        <state relative-caret-position="145">
+          <caret line="98" column="44" lean-forward="true" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
