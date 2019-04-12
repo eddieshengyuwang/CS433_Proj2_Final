@@ -11,11 +11,10 @@ def predict(model, img_dir, training=False, debug=False):
 
     for img_path in images:
         img = cv2.imread(img_path) / 255
-        if img.shape != (400,400,3):
-            img = cv2.resize(img, (400,400))
+        img = cv2.resize(img, (300,300))
         img_reshape = img.reshape((1, *img.shape))
-        pred = model.predict(img_reshape).reshape((400,400))
-        pred = (pred > 0.3).astype(np.uint8) * 255
+        pred = model.predict(img_reshape).reshape((608,608))
+        pred = (pred > 0.5).astype(np.uint8) * 255
 
         if debug:
             cv2.imshow('orig', img)

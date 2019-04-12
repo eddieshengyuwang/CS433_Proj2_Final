@@ -9,6 +9,7 @@ from Unet import Unet
 from keras import backend as K
 from keras.optimizers import Adam
 from ml_utils import f1, iou
+from keras.models import load_model
 
 K.clear_session()
 
@@ -115,14 +116,14 @@ if __name__ == '__main__':
     gt_paths = glob.glob(gt_dir)
     test_paths = glob.glob(test_dir)
 
-    split_perc = 0.8 # 80% training data
+    split_perc = 0.7 # 70% training data
     train_df = pd.DataFrame()
     train_df['path'] = train_paths
     train_df['gt'] = gt_paths
     train_df, val_df = train_test_split(train_df, test_size=1-split_perc)
 
     batch_size = 8
-    save_path = 'model_1.h5'
+    save_path = 'model_1_1.h5'
     target_shape = (608, 608)
     debug = False
     num_augs = 8 # this number is determined manually by the # of data augs you do in custom_generator
@@ -209,7 +210,9 @@ if __name__ == '__main__':
     callbacks_list = [checkpoint, tensorboard]
     steps_per_epoch = (train_df.shape[0] / batch_size) * num_augs
     input_shape = (300,300,3)
-    model = Unet(input_shape)
+
+    #model = Unet(input_shape)
+    model = load_model('models/model_1.h5')
     model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy', metrics=['acc', f1, iou])
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
                     callbacks=callbacks_list, validation_data=(x_val, y_val))
