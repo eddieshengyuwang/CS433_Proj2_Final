@@ -212,7 +212,7 @@ if __name__ == '__main__':
     input_shape = (300,300,3)
 
     #model = Unet(input_shape)
-    model = load_model('models/model_1.h5')
+    model = load_model('models/model_1.h5', custom_objects={'f1': f1, 'iou': iou})
     model.compile(optimizer=Adam(lr=1e-4), loss='binary_crossentropy', metrics=['acc', f1, iou])
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
                     callbacks=callbacks_list, validation_data=(x_val, y_val))
