@@ -110,7 +110,7 @@ if __name__ == '__main__':
     train_df, val_df = train_test_split(train_df, test_size=1-split_perc)
 
     batch_size = 8
-    save_path = 'model_0.h5'
+    save_path = 'model_1.h5'
     target_shape = (620, 620)
     debug = False
     num_augs = 8 # this number is determined manually by the # of data augs you do in custom_generator
