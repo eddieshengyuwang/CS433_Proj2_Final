@@ -10,6 +10,7 @@ from keras import backend as K
 from keras.optimizers import Adam
 from ml_utils import f1, iou
 from keras.models import load_model
+import argparse
 
 K.clear_session()
 
@@ -109,6 +110,11 @@ def custom_generator(paths, gt_paths, batch_size, num_augs, target_shape, debug=
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--save', type=str)
+    parser.add_argument('--load', type=str)
+    args = parser.parse_args()
+
     train_dir = 'data/training/images/*.png'
     gt_dir = 'data/training/groundtruth/*.png'
     test_dir = 'data/test/*.png'
@@ -123,7 +129,8 @@ if __name__ == '__main__':
     train_df, val_df = train_test_split(train_df, test_size=1-split_perc)
 
     batch_size = 8
-    save_path = 'model_1_2.h5'
+    save_path = 'models/' + args.save
+    load_path = 'models/' + args.load
     target_shape = (608, 608)
     debug = False
     num_augs = 8 # this number is determined manually by the # of data augs you do in custom_generator
@@ -205,14 +212,18 @@ if __name__ == '__main__':
     x_val = np.array(x_val)
     y_val = np.array(y_val)
 
-    checkpoint = ModelCheckpoint('models/' + save_path, monitor='val_iou', verbose=1, save_best_only=True, mode='max')
+    checkpoint = ModelCheckpoint(save_path, monitor='val_iou', verbose=1, save_best_only=True, mode='max')
     tensorboard = TensorBoard(log_dir='./logs/' + save_path[:-3], write_graph=False)
     callbacks_list = [checkpoint, tensorboard]
     steps_per_epoch = (train_df.shape[0] / batch_size) * num_augs
     input_shape = (300,300,3)
-
-    #model = Unet(input_shape)
-    model = load_model('models/model_1_1.h5', custom_objects={'f1': f1, 'iou': iou})
+    if not load_path:
+        input('Training model from scratch, press enter to confirm: ')
+        model = Unet(input_shape)
+    else:
+        input('Loading from {}, press enter to confirm: '.format(load_path))
+        model = load_model(load_path, custom_objects={'f1': f1, 'iou': iou})
+    input('Saving to {}, press enter to confirm: '.format(save_path))
     model.compile(optimizer=Adam(lr=1e-5), loss='binary_crossentropy', metrics=['acc', f1, iou])
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
                     callbacks=callbacks_list, validation_data=(x_val, y_val))
