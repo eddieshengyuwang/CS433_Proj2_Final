@@ -7,7 +7,6 @@ import re
 
 foreground_threshold = 0.25  # percentage of pixels > 1 required to assign a foreground label to a patch
 
-
 # assign a label to a patch
 def patch_to_label(patch):
     df = np.mean(patch)
@@ -48,10 +47,10 @@ def submit_test(path):
 
 
 if __name__ == '__main__':
-    submission_filename = 'dummy_submission.csv'
+    submission_filename = 'model_1_2.csv'
     image_filenames = []
     for i in range(1, 51):
-        image_filename = 'training/groundtruth/satImage_' + '%.3d' % i + '.png'
+        image_filename = 'data/test/test_' + '%.3d' % i + '.png'
         print(image_filename)
         image_filenames.append(image_filename)
     masks_to_submission(submission_filename, *image_filenames)

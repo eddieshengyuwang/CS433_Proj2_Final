@@ -122,7 +122,7 @@ if __name__ == '__main__':
     gt_paths = glob.glob(gt_dir)
     test_paths = glob.glob(test_dir)
 
-    split_perc = 0.7 # 70% training data
+    split_perc = 1 # 70% training data
     train_df = pd.DataFrame()
     train_df['path'] = train_paths
     train_df['gt'] = gt_paths
@@ -212,8 +212,8 @@ if __name__ == '__main__':
     x_val = np.array(x_val)
     y_val = np.array(y_val)
 
-    checkpoint = ModelCheckpoint(save_path, monitor='val_iou', verbose=1, save_best_only=True, mode='max')
-    tensorboard = TensorBoard(log_dir='./logs/' + save_path[:-3], write_graph=False)
+    checkpoint = ModelCheckpoint(save_path, monitor='iou', verbose=1, save_best_only=True, mode='max')
+    tensorboard = TensorBoard(log_dir='./logs/' +   [:-3], write_graph=False)
     callbacks_list = [checkpoint, tensorboard]
     steps_per_epoch = (train_df.shape[0] / batch_size) * num_augs
     input_shape = (300,300,3)
@@ -226,7 +226,9 @@ if __name__ == '__main__':
     input('Saving to {}, press enter to confirm: '.format(save_path))
     model.compile(optimizer=Adam(lr=1e-5), loss='binary_crossentropy', metrics=['acc', f1, iou])
     model.fit_generator(gen, epochs=25, steps_per_epoch= int(steps_per_epoch),
-                    callbacks=callbacks_list, validation_data=(x_val, y_val))
+                        callbacks=callbacks_list,
+#                        validation_data=(x_val, y_val)
+                        )
 
     model.save('path.h5')
 

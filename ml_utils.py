@@ -14,6 +14,10 @@ def parse_args():
                         help='Batch size.')
     parser.add_argument('--model_name', type=str, default='',
                         help='Model name.')
+    parser.add_argument('--save_path', type=str, default='',
+                        help='Save path.')
+    parser.add_argument('--load_path', type=str, default='',
+                        help='Load path.')
     return parser.parse_args()
 
 def iou(y_true, y_pred):
