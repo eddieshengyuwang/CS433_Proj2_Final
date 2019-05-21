@@ -4,6 +4,7 @@
 This project aims to perform semantic image segmentation from Google satellite images for roads. We first used a fully convolutional network (FCN) architecture with binary classification to predict 16x16 patches of satellite images as either road (1) or non-road (0), as found in [this report](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/report_FCN_OLD.pdf). We later found that a U-Net architecture performed much better with 0.884 F1-Score compared to 0.78 with FCN (unfortunately no written report on the U-Net model). Note that this repository only implements the project using the U-Net approach.
 
 Example of original training image, ground truth, model prediction:
+
 ![](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/data/pred_example.png)
 
 ### Prerequisites
@@ -36,7 +37,7 @@ tensorboard --logdir logs/
 
 And navigate on a web browser to the link Tensorboard indicated on Terminal (example for validation IOU):
 
-![](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/data/satImage_078.png)
+![](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/data/tensorboard.png)
 
 ### Predictions
 To make predictions on the test set, use `predict.py`.  It requires a mandatory argument `model_name` indicating which model in the *models/*  directory and optional arguments `--use_training` and `--debug` if you want to predict using the training set and want to see the prediction results, respectively. Note that if either is set, then the script will **not** generate submission csvs. Otherwise a submission csv with the current timestamp will be created in the *submissions/*  directory. 
