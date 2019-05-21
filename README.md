@@ -1,42 +1,55 @@
-# Fully Convolutional Networks for Image Road Segmentation
+# U-Net for Image Road Segmentation
 ##### Rebecca Cheng, Eddie Wang, Sandra Yang
 
-This project aims to perform semantic image segmentation from Google satellite images for roads. We used a fully convolutional network (FCN) architecture with binary classification to predict 16x16 patches of satellite images as either road (1) or non-road (0).
+This project aims to perform semantic image segmentation from Google satellite images for roads. We first used a fully convolutional network (FCN) architecture with binary classification to predict 16x16 patches of satellite images as either road (1) or non-road (0), as found in [this report](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/report_FCN_OLD.pdf). We later found that a U-Net architecture performed much better with 0.884 F1-Score compared to 0.78 with FCN (unfortunately no written report on the U-Net model). Note that this repository only implements the project using the U-Net approach.
+
+Example of original training image, ground truth, model prediction:
+[](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/data/pred_example.png)
 
 ### Prerequisites
 
-To install all the libraries required for the repository to run, execute the following Linux command:
+The project requires Python 3 and the libraries found in `requirements.txt`:
 
 ```
-pip install tensorflow numpy scipy tqdm opencv-python
+pip install -r requirements.txt
 ```
 
-Afterwards, you will need to download the VGG-16 from [this link](https://www.cs.toronto.edu/~frossard/vgg16/vgg16_weights.npz): and save it to the `pretrained_weights` folder. 
+### Training
 
-Next, you need to download our most recently trained weights from [this link](https://drive.google.com/file/d/1iXWgUc5SZx3sZufvGgNFw7Wgj3bBALkN/view?usp=sharing) and place it in the `checkpoints/kitti/900/` directory. There should be four files that are extracted from the link, make sure all of them are extracted to the directory!
-
-### Running
-
-We ran our training on Google Cloud Platform NVIDIA Tesla K80 GPU, which took around 2 hours to train. If you want to train the model from scratch, make sure to set `train = True` on line 13 in the `run.py` file:
+Training code is found in the `train.py` file. It requires a mandatory `--save_path` argument specifying the model save name in the *models/* directory and an optional `--load_path` argument specifying the model load name in the *models/* directory if you want to resume training from a saved point. If `--load_path` is not specified, then the model will train from scratch (which took around 40 min for 15 epochs on a Google Cloud Platform NVIDIA Tesla K80 GPU). Below are example calls:
 
 ```
-...
-viz_dir = './data/data_road/test_set_images'
+# train from scratch
+python train.py --save_path model_1_5.h5
 
-# set below boolean = True if want to train
-train = True
-...
+# train from saved model
+python train.py --load_path model_1_4.h5 --save_path model_1_5.h5
 ```
-and run `python run.py`. Alternatively, you can leave the `run.py` file as is, which will use our pre-trained FCN model to predict outputs for the test images. The submission file will be found in the `runs/<highest number>/` directory called `fcn_16_patch8.csv`. Note that even if using pre-trained weights, prediction will stay take around 5 minutes.
 
-## Description of files
-### FCN Model
-- `fcn.py`: this file takes the downloaded pre-trained VGG-16 CNN and converts it into an FCN. It also contains the training and prediction code. 
-- `helper.py`: this file contains many useful helper functions to preprocess images and save checkpoints during training.
-- `run.py`: wrapper file that trains and predicts road segmentation images using the FCN model. It will either train from scratch or use our most recently trained weights to predict test images based on user setting
-- `loss.py` and `model_utils.py`: helper files for `fcn.py` 
+The training script uses a custom generator (`custom_generator`) to continually generate augmented images. For our training the augmentations are: 1 original image, 5 rotations in [60, 120, 180, 240, 300] degrees, 1 horizontal flip, and 1 vertical flip (8 augmentations in total). If you want to modify image augmentations, be sure to change the `num_augs` argument in the `custom_generator` function accordingly. 
 
-### CNN Model
-We also trained a CNN as a baseline model to compare with the FCN in the report. Below are files used to run and train the CNN model. 
--  `tf_aerial_images.py`: run this first to train the CNN model
-- `load_model_predict`: run this after to predict test images
+The training script also separates the training set data into 80/20 split between training and validation sets. Best model predictions on validation set per epoch are based on *intersection over union (Jaccard index)* are saved in the *models/<save_path>* directory. Lastly, training progress is tracked through Tensorboard callbacks. To view the graphs, run the following command on Terminal:  
+
+```
+tensorboard --logdir logs/
+```
+
+And navigate on a web browser to the link Tensorboard indicated on Terminal (example for validation IOU):
+
+[](https://github.com/eddieshengyuwang/CS433_Proj2_Final/blob/master/data/satImage_078.png)
+
+### Predictions
+To make predictions on the test set, use `predict.py`.  It requires a mandatory argument `model_name` indicating which model in the *models/*  directory and optional arguments `--use_training` and `--debug` if you want to predict using the training set and want to see the prediction results, respectively. Note that if either is set, then the script will **not** generate submission csvs. Otherwise a submission csv with the current timestamp will be created in the *submissions/*  directory. 
+
+```
+# predict on training set and view them 
+python predict.py --model_name model_1_5.h5 --debug --use_training
+
+# generate submission csv
+python predict.py --model_name model_1_5.h5
+```
+
+### Additional files
+- `Unet.py`: U-Net model structure code.
+- `ml_utils.py`: Contains useful helper functions like calculating IOU, etc.
+- `mask_to_submission.py`: Code to convert prediction images to a submission csv file.
