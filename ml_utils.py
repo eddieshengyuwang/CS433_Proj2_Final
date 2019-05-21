@@ -18,6 +18,10 @@ def parse_args():
                         help='Save path.')
     parser.add_argument('--load_path', type=str, default='',
                         help='Load path.')
+    parser.add_argument('--debug', type=bool, default=False, nargs='?',
+                        help='Debug test predictions.')
+    parser.add_argument('--use_training', type=bool, default=False, nargs='?',
+                        help='Predict on training set.')
     return parser.parse_args()
 
 def iou(y_true, y_pred):

@@ -1,3 +1,9 @@
 opencv-python
 keras
 imgaug
+sklearn
+numpy
+pandas
+matplotlib
+tensorflow
+tensorflow-gpu
